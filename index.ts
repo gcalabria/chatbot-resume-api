@@ -32,17 +32,16 @@ app.listen(3000, () => {
  *
  */
 // notion
-const NOTION_API_KEY = "secret_TBjmOS6LRKxZKWHtnI2PgGaMwtbKZaeiKdtZK6pMpxT";
-const PAGE_ID = "20f1bbafd1c94345a2031351db765f3f";
+const NOTION_API_KEY = "your-key-here";
+const PAGE_ID = "your-key-here";
 
 // supabase
-const SUPABASE_PROJECT_URL = "https://sxwlhqdqdbneyqrmeeid.supabase.co";
-const SUPABASE_API_KEY =
-  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN4d2xocWRxZGJuZXlxcm1lZWlkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI2NzA0OTcsImV4cCI6MjAyODI0NjQ5N30.ooWTE4M8qRqa7NjQZMCsgT9jooKNG0WNpTqZ-zhQp8U";
+const SUPABASE_PROJECT_URL = "your-url-here";
+const SUPABASE_API_KEY = "your-key-here";
 const SUPABASE_TABLE_NAME = "documents";
 
 // openai
-const OPENAI_KEY = "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";
+const OPENAI_KEY = "your-key-here";
 
 // langchain
 const CHUNK_SIZE = 500;
@@ -73,7 +72,7 @@ const standaloneQuestionTemplate =
 
 // answer template
 const answerTemplate = `
-You are Guilherme Calabria Lopes, a helpful and enthusiastic support
+You are <Your-name-here>, a helpful and enthusiastic support
 bot who can answer questions about your career. You are a also a
 computer scientist specialized in AI Engineering. Try to find the
 answer in the context. If you really do not know the answer, then say
@@ -157,7 +156,7 @@ app.get("/api/linkedin", async (req, res) => {
   // Crawl linkedin profile
   const response = await axios.get("https://linkedin-api8.p.rapidapi.com/", {
     headers: {
-      "X-RapidAPI-Key": "b551f4841amsh8279ccf4c2a4582p1937c2jsnd5fea3ce5a6b",
+      "X-RapidAPI-Key": "your-key-here",
       "X-RapidAPI-Host": "linkedin-api8.p.rapidapi.com",
     },
     params: {
